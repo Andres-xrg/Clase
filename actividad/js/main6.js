@@ -162,7 +162,7 @@ function DecidirCrearNubes() {
 function CrearObstaculo() {
     let obstaculo = document.createElement("div"); // Crea un nuevo elemento div
     contenedor.appendChild(obstaculo); // Añade el obstáculo al contenedor
-    obstaculo.classList.add("cactus"); // Añade la clase 'cactus' al obstáculo
+    obstaculo.classList.add("cactus");
     if (Math.random() > 0.5) obstaculo.classList.add("cactus2"); // Añade una clase extra aleatoriamente
     obstaculo.posX = contenedor.clientWidth; // Establece la posición inicial del obstáculo
     obstaculo.style.left = contenedor.clientWidth + "px"; // Actualiza la posición en el DOM
@@ -175,9 +175,9 @@ function CrearObstaculo() {
 function CrearNube() {
     let nube = document.createElement("div"); // Crea un nuevo elemento div
     contenedor.appendChild(nube); // Añade la nube al contenedor
-    nube.classList.add("nube"); // Añade la clase 'nube' a la nube
+    nube.classList.add("nube"); 
     nube.posX = contenedor.clientWidth; // Establece la posición inicial de la nube
-    nube.style.left = contenedor.clientWidth + "px"; // Actualiza la posición en el DOM
+    nube.style.left = contenedor.clientWidth + "px"; // Actualiza la posición 
     nube.style.bottom = minNubeY + Math.random() * (maxNubeY - minNubeY) + "px"; // Establece una altura aleatoria para la nube
     
     nubes.push(nube); // Añade la nube a la lista de nubes
@@ -193,7 +193,7 @@ function MoverObstaculos() {
             GanarPuntos(); // Incrementa el puntaje
         } else {
             obstaculos[i].posX -= CalcularDesplazamiento(); // Actualiza la posición horizontal del obstáculo
-            obstaculos[i].style.left = obstaculos[i].posX + "px"; // Actualiza la posición en el DOM
+            obstaculos[i].style.left = obstaculos[i].posX + "px"; // Actualiza la posición 
         }
     }
 }
@@ -206,7 +206,7 @@ function MoverNubes() {
             nubes.splice(i, 1); // Elimina la nube de la lista
         } else {
             nubes[i].posX -= CalcularDesplazamiento() * velNube; // Actualiza la posición horizontal de la nube
-            nubes[i].style.left = nubes[i].posX + "px"; // Actualiza la posición en el DOM
+            nubes[i].style.left = nubes[i].posX + "px"; // Actualiza la posición 
         }
     }
 }
@@ -214,7 +214,7 @@ function MoverNubes() {
 // Incrementa el puntaje y ajusta la dificultad del juego
 function GanarPuntos() {
     score++; // Incrementa el puntaje
-    textoScore.innerText = score; // Actualiza el texto del puntaje en el DOM
+    textoScore.innerText = score; // Actualiza el texto del puntaje
     if (score === 5) {
         gameVel = 1.5; // Aumenta la velocidad del juego
         contenedor.classList.add("mediodia"); // Cambia la clase del contenedor
@@ -230,19 +230,19 @@ function GanarPuntos() {
 
 // Maneja el estado de juego terminado
 function GameOver() {
-    Estrellarse(); // Llama a la función Estrellarse()
+    Estrellarse(); // Llama a la función Estrellarse
     gameOver.style.display = "block"; // Muestra el mensaje de game over
 }
 
-// Detecta colisiones entre el dinosaurio y los obstáculos
+
 function DetectarColision() {
     for (let i = 0; i < obstaculos.length; i++) {
         if (obstaculos[i].posX > dinoPosX + dino.clientWidth) {
-            // Si el obstáculo está a la derecha del dinosaurio, puede evadirlo
+        
             break; // Al estar en orden, no puede chocar con más
         } else {
             if (IsCollision(dino, obstaculos[i], 10, 30, 15, 20)) {
-                GameOver(); // Si hay colisión, termina el juego
+                GameOver(); 
             }
         }
     }
