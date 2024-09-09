@@ -1,0 +1,16 @@
+/* Estilos para el contenedor de la caja de diapositivas */
+#cajaSlide {
+  display: block; /* Muestra el elemento como un bloque */
+  margin: 0; /* Elimina cualquier margen alrededor del contenedor */
+  width: 100%; 
+  text-align: center; /*centra el contenido*/
+}
+
+/* Estilos para las imágenes dentro del contenedor de la caja de diapositivas */
+#cajaSlide IMG {
+  max-width: 800px; /* Establece un ancho máximo de 800px para la imagen */
+  border: 10px solid black; /* Agrega un borde sólido negro alrededor de la imagen */
+  border-radius: 20px; /* Redondea las esquinas del borde con un radio de  */
+  box-shadow: 10px 10px 10px black; /* Agrega una sombra negro difuminado a la imagen */
+  cursor: pointer; 
+}

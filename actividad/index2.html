@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pase de Imágenes Automático</title>
+  <link rel="stylesheet" href="./CSS/Style.css">
+</head>
+<body onload="iniciar();">
+  <h1 id="titulo1">Pase de Imágenes automático</h1>
+
+  <div id="cajaSlide">
+     <!-- Imagen que rota automáticamente -->
+    <img id="imgSlide" src="./images/img1.jpg" title="Imagen" alt="Imagen" onclick="rotarImagenes();" />
+    <br /><br />
+    <form>
+       <!-- Los Botones son para parar y continuar la rotación -->
+      <input type="button" value="Parar" onclick="detener();" />
+      <input type="button" value="Continuar" onclick="iniciar();" />
+    </form>
+  </div>
+   <!-- Enlace al archivo de JavaScript -->
+  <script src="./js/main.js"></script>
+</body>
+</html>

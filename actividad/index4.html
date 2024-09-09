@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Declara el tipo de documento HTML5 y establece el idioma como español -->
+<head>
+  <meta charset="UTF-8">
+  <!-- Define la codificación de caracteres como UTF-8 para soportar caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Configura la página para ser responsiva, ajustando el ancho de la ventana gráfica a la del dispositivo -->
+  <meta name="author" content="Eandres" />
+  <!-- Incluye el metadato que indica el autor de la página -->
+  <title>Operaciones</title>
+</head>
+<body>
+
+  <h1>A Calcular</h1>
+  <input type="number" id="num1" placeholder="Número 1" />
+
+  <select id="operacion">
+    <!-- Este sirve par que el Menú se desplegue para seleccionar las operación matemática -->
+    <option value="+">+</option>
+    <!-- Opción para sumar -->
+    <option value="-">-</option>
+    <!-- Opción para restar -->
+    <option value="*">*</option>
+    <!-- Opción para multiplicar -->
+    <option value="/">/</option>
+    <!-- Opción para dividir -->
+  </select>
+
+  <input type="number" id="num2" placeholder="Número 2" />
+  <button onclick="calcular()">Calcular</button>
+  <!-- Este Botón al hacer clic,se ejecuta la función en javascript para realizar las operacióne matemáticas -->
+
+  <p id="resultado"></p>
+  <!-- Aca se mostrara el resultado de las operaciones -->
+
+  <script src="./js/main3.js"></script>
+  <!-- Enlaza el archivo JavaScript externo "main3.js" que contiene la lógica para realizar el cálculo -->
+</body>
+</html>

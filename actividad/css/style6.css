@@ -1,0 +1,134 @@
+/* Restablece el padding y el margen para todos los elementos */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo para el elemento body */
+body {
+    height: 100vh;
+    background: #dcc267;/* Color del fondo */
+    display: flex;
+    align-items: center;/* Alinea verticalmente el contenido en el centro */
+}
+
+/* Estilo para el contenedor principal del juego */
+.contenedor {
+    width: 920px;/* Ancho del contenedor */
+    height: 280px;/* Altura    del contenedor */
+    margin: 0 auto;/* Centra el contenedor horizontalmente */
+    position: relative;
+    background: linear-gradient(#b7d6c7, transparent) #ffe2d1;
+    transition: background-color 1s linear;
+    overflow: hidden;/* Oculta cualquier contenido que se desborde del contenedor */
+
+}
+
+/* Estilos para las diferentes fases del día */
+.mediodia {
+   background: linear-gradient(#c89788); /* Fondo para la fase de mediodía */
+}
+
+.tarde {
+    background: linear-gradient(#4371c0); /* Fondo para la fase de tarde */
+}
+
+.noche {
+    background: linear-gradient(#b23c27);/* Fondo para la fase de noche */
+}
+
+/* Estilo para el dinosaurio */
+.dino {
+    width: 84px;/*Ancho del dinosaurio*/
+    height: 84px;/*Altura del dinosaurio*/
+    position: absolute;/* Posición absoluta dentro del contenedor */
+    bottom: 22px;
+    left: 42px;
+    z-index: 2; /* Asegura que el dinosaurio esté por encima de otros elementos */
+    background: url(../img/dino.png) repeat-x 0px 0px;
+    background-size: 336px 84px;/* Tamaño total de la imagen de fondo */
+    background-position-x: 0px; /* Posición inicial de la imagen de fondo en el eje x */
+}
+
+/* Animación para el dinosaurio en movimiento */
+.dino-corriendo {
+    animation: animarDino 0.25s steps(2) infinite;
+}
+
+/* Estilo para el dinosaurio cuando se choca */
+.dino-estrellado {
+    background-position-x: -252px;
+}
+
+/* Estilo para el suelo */
+.suelo {
+    width: 200%;/* Ancho del suelo para que se repita */
+    height: 42px;/* Altura del suelo */
+    position: absolute;
+    bottom: 0;
+    left: 0;/* Coloca el suelo en el borde izquierdo del contenedor */
+    background: url(../img/suelo.png) repeat-x 0px 0px;/* Fondo con imagen del suelo */
+    background-size: 50% 42px;
+}
+
+/* Estilo para los obstáculos de cactus */
+.cactus {
+    width: 46px;/* Ancho del cactus */
+    height: 96px; /* Altura del cactus */
+    position: absolute;
+    bottom: 16px;
+    left: 600px;/* Espacio del borde izquierdo del contenedor */
+    z-index: 1;
+    background: url(../img/cactus1.png) no-repeat;/* Fondo con imagen del cactus */
+}
+
+/* Estilo para un tipo de cactus diferente */
+.cactus2 {
+    width: 98px;/* Ancho del cactus 2 */
+    height: 66px;/* Altura del cactus 2 */
+    background: url(../img/cactus2.png) no-repeat;
+}
+
+/* Estilo para las nubes */
+.nube {
+    width: 92px;
+    height: 26px;
+    position: absolute;
+    z-index: 0;/* Asegura que la nube esté por debajo del dinosaurio y obstáculos */
+    background: url(../img/nube.png) no-repeat;/* Fondo con imagen de la nube */
+    background-size: 92px 26px; /* Tamaño del fondo de la nube */
+}
+
+.score {
+    width: 100px; /* Ancho del elemento de puntuación */
+    height: 30px; /* Altura del elemento de puntuación */
+    position: absolute; /* Posición absoluta dentro del contenedor */
+    top: 5px; 
+    right: 15px; /* Espacio desde el borde derecho del contenedor */
+    z-index: 10; /* Asegura que la puntuación esté por encima de otros elementos */
+    color: #d48871; 
+    font-family: Verdana; /* Fuente del texto */
+    font-size: 30px; /* Tamaño del texto */
+    font-weight: bold; /* Peso del texto  */
+    text-align: right; /* Alinea el texto a la derecha */
+}
+
+.game-over {
+    display: none; /* Oculta el mensaje por defecto */
+    position: absolute; /* Posición absoluta dentro del contenedor */
+    width: 100%; /* Ancho del mensaje igual al contenedor */
+    text-align: center; /* Centra el texto */
+    color: #7e928b; /* Color del texto del mensaje */
+    font-size: 30px; /* Tamaño del texto del mensaje */
+    font-family: Verdana; 
+    font-weight: 700; /* Peso del texto del mensaje  */
+}
+
+@keyframes animarDino {
+    from {
+        background-position-x: -84px; /* Posición inicial de la imagen de fondo */
+    }
+    to {
+        background-position-x: -252px;/* Posición final de la imagen de fondo */
+    }
+}

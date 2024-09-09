@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio</title>
+    <head>
+        <meta name="author" content="Raúl Caro Pastorino" />
+      </head>
+      
+      <script>
+        function viajarConSuerte() {
+            // Con esta funcion hace que rediriga a un URL aleatorio cuando este se vaya a ejecutar
+            var x = Math.random() * 10;
+            // Genera un número aleatorio y lo guarda en la variable x
+            var URL;
+            // aca se declara la variable de la URL, que esta se utilizara para poder redireccionar al usuaio            
+            if (x <= 3) {
+                // Si x es menor o igual a 3, se ejecuta
+                x = 0;
+                //Se le Asigna el valor 0 a la variable x 
+                URL = 'https://www.hotmail.com/';
+                //Se Asigna la URL del Hotmail
+            } else if (x <= 6) {
+                // Si x es mayor que 3 o menor igual a 6, se ejecuta 
+                x = 1;
+                // Asigna el valor 1 a la variable x 
+                URL = 'https://www.gmail.com/';
+                //Se Asigna la URL del Gmail  
+            } else {
+                // Si x es mayor que 6,se ejecuta 
+                x = 2;
+                // Se asigna el valor 2
+                URL = 'https://www.yahoo.com/';
+                //Se Asigna la URL del Yahoo 
+            }
+    
+            location.assign(URL);
+        }
+    </script>
+    
+      <body>
+        <h1 id="titulo1">URL Aleatoria</h1>
+        <div>
+          <a href="javascript:viajarConSuerte();" title="Viajando con suerte">Pulsa aquí para probar suerte</a>
+          <!--aca permite ejecutar el enlace y lo redirecciona al lugar del navegador-->
+        </div>
+      </body>
+</html>

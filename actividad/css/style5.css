@@ -1,0 +1,37 @@
+
+/* Estilos para el contenedor del semáforo */
+.semaforo {
+  width: 100px; /* Ancho del semáforo */
+  height: 250px; /* Altura del semáforo */
+  background-color: #333; /* Color de fondo oscuro para el semáforo */
+  border-radius: 10px; /* se le hace un borde de 10px */
+  display: flex; /* Utiliza flexbox para alinear elementos internos */
+  flex-direction: column; /* Organiza los elementos de la columna */
+  align-items: center; /* Centra los elementos internos horizontalmente */
+  justify-content: space-around; 
+  padding: 10px; 
+  float: right; /* Hace que el semáforo flote a la derecha del contenedor padre */
+}
+
+/* Estilos para las luces del semáforo */
+.luz {
+  width: 80px; /* Ancho de cada luz del semáforo */
+  height: 80px; /* Altura de cada luz del semáforo */
+  border-radius: 50%; /* Hace que las luces sean circulares */
+  background-color: #222; /* Color de fondo oscuro para las luces cuando están apagadas */
+}
+
+/* Estilo para la luz roja */
+#rojo {
+  background-color: red; /* Color de fondo rojo para la luz roja */
+}
+
+/* Estilo para la luz amarilla */
+#amarillo {
+  background-color: yellow; /* Color de fondo amarillo para la luz amarilla */
+}
+
+/* Estilo para la luz verde */
+#verde {
+  background-color: green; /* Color de fondo verde para la luz verde */
+}
